@@ -1,19 +1,18 @@
-# JavaScript Standard Style
-[![travis][travis-image]][travis-url]
+# JavaScript Whatever Style
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
 
-[travis-image]: https://img.shields.io/travis/feross/standard.svg?style=flat
-[travis-url]: https://travis-ci.org/feross/standard
-[npm-image]: https://img.shields.io/npm/v/standard.svg?style=flat
-[npm-url]: https://npmjs.org/package/standard
-[downloads-image]: https://img.shields.io/npm/dm/standard.svg?style=flat
-[downloads-url]: https://npmjs.org/package/standard
+[npm-image]: https://img.shields.io/npm/v/jsw.svg?style=flat
+[npm-url]: https://npmjs.org/package/jsw
+[downloads-image]: https://img.shields.io/npm/dm/jsw.svg?style=flat
+[downloads-url]: https://npmjs.org/package/jsw
 
 ### One Style to Rule Them All
 
 No decisions to make. No `.eslintrc`, `.jshintrc`, or `.jscsrc` files to manage. It just
 works.
+
+This is a fork from [JavaScript Standard](https://github.com/feross/standard) by Feross, et al, except it totally doesn't care whether you use semicolons or not - just like the JavaScript language spec. This module will track any changes made upstream.
 
 This module saves you (and others!) time in two ways:
 
@@ -25,15 +24,15 @@ This module saves you (and others!) time in two ways:
 ## Install
 
 ```bash
-npm install standard
+npm install jsw
 ```
 
 ## Rules
 
+- **Semicolons? Use 'em or not. Whatever. It literally doesn't matter.** – [It's][1] [fine.][2] [Really!][3]
 - **2 spaces** – for indentation
 - **Single quotes for strings** – except to avoid escaping
 - **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
 - **Never start a line with `(` or `[`**
   - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
   - [More details][4]
@@ -47,54 +46,48 @@ npm install standard
 - Always prefix browser globals with `window` – except `document` and `navigator` are okay
   - Prevents accidental use of poorly-named browser globals like `open`, `length`,
     `event`, and `name`.
-- **And [more goodness][6]** – *give `standard` a try today!*
+- **And [more goodness][6]** – *give `jsw` a try today!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://github.com/maxogden/messages/issues/18
 [4]: RULES.md#automatic-semicolon-insertion-asi
 [5]: https://developer.mozilla.org/en-US/docs/Web/API/Window.self
-[6]: RULES.md#javascript-standard-style
+[6]: RULES.md#javascript-whatever-style
 
 To get a better idea, take a look at
 [a sample file](https://github.com/feross/bittorrent-dht/blob/master/client.js) written
-in JavaScript Standard Style, or check out some of
-[the repositories](https://github.com/feross/standard/blob/master/test/clone.js) that use
-`standard`.
+in JavaScript Whatever Style, or check out some of
+[the repositories](https://github.com/feross/whatever/blob/master/test/clone.js) that use
+`whatever`.
 
 ## Badge
 
 Use this in one of your projects? Include one of these badges in your readme to
-let people know that your code is using the standard style.
+let people know that your code is using the whatever style.
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
-```markdown
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-```
-
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![js-whatever-style](https://cdn.rawgit.com/jden/jsw/master/badge.png)](https://github.com/jden/jsw)
 
 ```markdown
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![js-whatever-style](https://cdn.rawgit.com/jden/jsw/master/badge.png)](https://github.com/jden/jsw)
 ```
 
 ## Usage
 
-The easiest way to use JavaScript Standard Style to check your code is to install it
+The easiest way to use JavaScript Whatever Style to check your code is to install it
 globally as a Node command line program. To do so, simply run the following command in
-your terminal (flag `-g` installs `standard` globally on your system, omit it if you want
+your terminal (flag `-g` installs `jsw` globally on your system, omit it if you want
 to install in the current working directory):
 
 ```bash
-npm install standard -g
+npm install jsw -g
 ```
 
-After you've done that you should be able to use the `standard` program. The simplest use
+After you've done that you should be able to use the `jsw` program. The simplest use
 case would be checking the style of all JavaScript files in the current working directory:
 
 ```bash
-$ standard
+$ jsw
 Error: Use JavaScript Standard Style
   lib/torrent.js:950:11: Expected '===' and instead saw '=='.
 ```
@@ -107,7 +100,7 @@ $ standard src/util/**/*.js
 
 ### Editor plugins
 
-First, install `standard`. Then, install the appropriate plugin for your editor:
+First, install `jsw`. Then, install the appropriate plugin for your editor:
 
 - **[Sublime Text](https://www.sublimetext.com/)** - Install
   [Package Control](https://packagecontrol.io/),
@@ -134,7 +127,7 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
       "standard": "^3.0.0"
     },
     "scripts": {
-      "test": "standard && node my-tests.js"
+      "test": "jsw && node my-tests.js"
     }
   }
   ```
@@ -143,7 +136,7 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 
   ```
   $ npm test
-  Error: Use JavaScript Standard Style
+  Error: Use JavaScript Whatever Style
     lib/torrent.js:950:11: Expected '===' and instead saw '=='.
   ```
 
@@ -151,9 +144,9 @@ First, install `standard`. Then, install the appropriate plugin for your editor:
 
 ## FAQ
 
-### Why would I use JavaScript Standard Style?
+### Why would I use JavaScript Whatever Style?
 
-The beauty of JavaScript Standard Style is that it's simple. No one wants to maintain
+The beauty of JavaScript Whatever Style is that it's simple. No one wants to maintain
 multiple hundred-line style configuration files for every module/project they work on.
 Enough of this madness!
 
@@ -164,17 +157,17 @@ This module saves you time in two ways:
 - **Catch style errors before they're submitted in PRs.** Saves precious code review time
   by eliminating back-and-forth between maintainer and contributor.
 
-Adopting `standard` style means ranking the importance of code clarity and community
+Adopting `jsw` style means ranking the importance of code clarity and community
 conventions higher than personal style. This might not make sense for 100% of projects and
 development cultures, however open source can be a hostile place for newbies. Setting up
 clear, automated contributor expectations makes a project healthier.
 
 ### I disagree with rule X, can you change it?
 
-No. The the whole point of `standard` is to avoid [bikeshedding][bikeshedding] about
+No. The the whole point of `jsw` is to avoid [bikeshedding][bikeshedding] about
 style. There are lots of debates online about tabs vs. spaces, etc. that will never be
 resolved. These debates just distract from getting stuff done. At the end of the day you
-have to 'just pick something', and that's the whole philosophy of `standard` -- its a
+have to 'just pick something', and that's the whole philosophy of `jsw` -- its a
 bunch of sensible 'just pick something' opinions. Hopefully, users see the value in that
 over defending their own opinions.
 
@@ -183,7 +176,7 @@ over defending their own opinions.
 ### But this isn't a real web standard!
 
 Of course it's not! The style laid out here is not affiliated with any official web
-standards groups, which is why this repo is called `feross/standard` and not
+standards groups, which is why this repo is called `jden/jsw` and not
 `ECMA/standard`.
 
 The word "standard" has more meanings than just "web standard" :-) For example:
@@ -196,7 +189,7 @@ The word "standard" has more meanings than just "web standard" :-) For example:
 Yes! Just run `standard --format filename.js`. This uses
 [Max Ogden][max]'s automatic formatter
 [`standard-format`][standard-format], which can automatically
-fix most code issues.
+fix most code issues. It'll strip out all of your semicolons, though, since it conforms to the stricter subset that `jsw` is forked from, `standard`.
 
 While most issues can be fixed, some, like not handling errors in node-style callbacks,
 must be fixed manually.
@@ -225,16 +218,16 @@ a `standard.ignore` property to `package.json`:
 
 ### How do I hide a certain warning?
 
-In rare cases, you'll need to break a rule and hide the warning generated by `standard`.
+In rare cases, you'll need to break a rule and hide the warning generated by `jsw`.
 
-JavaScript Standard Style uses [`eslint`](http://eslint.org/) under-the-hood and you can
+JavaScript Whatever Style uses [`eslint`](http://eslint.org/) under-the-hood and you can
 hide warnings as you normally would if you used `eslint` directly.
 
 To get verbose output (so you can find the particular rule name to ignore), run:
 
 ```bash
-$ standard --verbose
-Error: Use JavaScript Standard Style
+$ jsw --verbose
+Error: Use JavaScript Whatever Style
   routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
 ```
 
@@ -266,7 +259,7 @@ No. Use `eslint` and
 [this shareable config](https://github.com/feross/eslint-config-standard) if you want to
 configure hundreds of options individually.
 
-Pro tip: Just use `standard` and move on. There are actual real problems that you could
+Pro tip: Just use `jsw` and move on. There are actual real problems that you could
 spend your time solving! :P
 
 ### What about Web Workers?
@@ -282,17 +275,17 @@ Until we figure out a better solution, we recommend adding this to the top of wo
 /* global self */
 ```
 
-This lets `standard` (as well as humans reading your code) know that `self` is a global
+This lets `jsw` (as well as humans reading your code) know that `self` is a global
 in web worker code.
 
-### Is there a Git `pre-commit` hook for `standard`?
+### Is there a Git `pre-commit` hook for `jsw`?
 
 Funny you should ask!
 
 ```sh
 #!/bin/sh
 # Ensure all javascript files staged for commit pass standard code style
-git diff --name-only --cached --relative | grep '\.js$' | xargs standard
+git diff --name-only --cached --relative | grep '\.js$' | xargs jsw
 exit $?
 ```
 
@@ -309,3 +302,4 @@ PreCommit:
 ## License
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
+Additonal trivial contributions by jden.

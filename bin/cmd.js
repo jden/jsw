@@ -30,10 +30,10 @@ if (argv._[0] === '-') {
 if (argv.help) {
   console.log(function () {
   /*
-  standard - JavaScript Standard Style
+  jsw - JavaScript Whatever Style
 
   Usage:
-      standard <flags> [FILES...]
+      jsw <flags> [FILES...]
 
       If FILES is omitted, then all JavaScript source files (*.js, *.jsx) in the current
       working directory are checked, recursively.
@@ -48,8 +48,8 @@ if (argv.help) {
           --version   Show current version.
       -h, --help      Show usage information.
 
-  Readme:  https://github.com/feross/standard
-  Report bugs:  https://github.com/feross/standard/issues
+  Readme:  https://github.com/jden/jsw
+  Report bugs:  https://github.com/jden/jsw/issues
 
   */
   }.toString().split(/\n/).slice(2, -2).join('\n'))
@@ -87,8 +87,8 @@ function onResult (err, result) {
   if (result.errorCount === 0) process.exit(0)
 
   console.error(
-    'standard: Use JavaScript Standard Style ' +
-    '(https://github.com/feross/standard)'
+    'standard: Use JavaScript Whatever Style ' +
+    '(https://github.com/jden/jsw)'
   )
 
   result.results.forEach(function (result) {
@@ -105,11 +105,11 @@ function onResult (err, result) {
 }
 
 function onError (err) {
-  console.error('standard: Unexpected linter output:\n')
+  console.error('jsw: Unexpected linter output:\n')
   console.error(err.stack || err.message || err)
   console.error(
-    '\nIf you think this is a bug in `standard`, open an issue: ' +
-    'https://github.com/feross/standard'
+    '\nIf you think this is a bug in `jsw`, open an issue: ' +
+    'https://github.com/jden/jsw'
   )
   process.exit(1)
 }

@@ -1,17 +1,18 @@
 {
-  "name": "standard",
-  "description": "JavaScript Standard Style",
+  "name": "jsw",
+  "description": "JavaScript Whatever Style",
   "version": "3.11.1",
   "author": {
-    "name": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "http://feross.org/"
+    "name": "jden",
+    "email": "jason@denizac.org",
+    "url": "https://jden.us"
   },
   "bin": {
-    "standard": "./bin/cmd.js"
+    "jswhatever": "./bin/cmd.js",
+    "jsw": "./bin/cmd.js"
   },
   "bugs": {
-    "url": "https://github.com/feross/standard/issues"
+    "url": "https://github.com/jden/jsw/issues"
   },
   "dependencies": {
     "dezalgo": "^1.0.1",
@@ -33,8 +34,11 @@
     "run-series": "^1.0.2",
     "tape": "^4.0.0"
   },
-  "homepage": "https://github.com/feross/standard",
+  "homepage": "https://github.com/jden/jsw",
   "keywords": [
+    "whatever",
+    "with semicolon",
+    "semicolon",
     "standard",
     "style checker",
     "code style",
@@ -56,15 +60,16 @@
     "quality",
     "checker",
     "code standards",
-    "JavaScript Standard Style",
-    "standard style"
+    "JavaScript Whatever Style",
+    "standard style",
+    "whatever style"
   ],
   "license": "MIT",
   "main": "index.js",
   "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/feross/standard.git"
+    "url": "git://github.com/jden/jsw.git"
   },
   "scripts": {
     "test": "node ./bin/cmd.js && tape test/*.js"
